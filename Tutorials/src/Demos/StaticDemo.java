@@ -4,14 +4,21 @@ class Emp{
     int salary;
     int age;
     static String ceo; // Now the variable is not object specific. if it's value changes it changes for all object
+    static String country;
 
     // Using static block we can initialize multiple values for static variables which is already been declared
     static {
         ceo = "Mathi";
+        country = "India";
     }
 
     public void show() {
         System.out.println(salary + " : " + age + " : " + ceo);
+    }
+
+    // Only static variables can be used inside a static variable
+    public static void display(){
+        System.out.println(country);
     }
 }
 
@@ -30,5 +37,7 @@ public class StaticDemo {
 
         Arvind.show();
         chandru.show();
+
+        Emp.display(); // We Don't Need object to call a static method
     }
 }

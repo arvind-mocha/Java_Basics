@@ -15,7 +15,6 @@ class Emp{
     }
 }
 
-
 public class StaticDemo {
     public static void main(String[] args) {
         Emp Arvind = new Emp();
